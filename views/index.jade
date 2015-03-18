@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        title #{title}
+        link(rel='stylesheet', href='/css/index.css')
+    
+    body
+        header
+            h1 #{title}
+        h2 Please sign in
+        .container
+            .main-content
+                form#login_form(action='' method='POST')
+                fieldset
+                    input#username(placeholder='username' name='username')
+                fieldset
+                    input#password(placeholder='password' name='password' type='password')
+                fieldset
+                    input(value='Sign in' type='submit')
+        footer
+            p Running on node with Express and Jade
