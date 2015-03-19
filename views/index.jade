@@ -7,15 +7,24 @@ html(lang="en")
     body
         header
             h1 #{title}
-        h2 Please sign in
         .container
-            .main-content
-                form#login_form(action='' method='POST')
-                fieldset
-                    input#username(placeholder='username' name='username')
-                fieldset
-                    input#password(placeholder='password' name='password' type='password')
-                fieldset
-                    input(value='Sign in' type='submit')
+            .main-content-full
+                h2 Please sign in
+                if !!error_message && error_message != ''
+                    .error= error_message
+                form#login_form(action='/' method='POST')
+                    fieldset
+                        input#username(placeholder='username' name='username' required)
+                    //- fieldset
+                        //- input#password(placeholder='password' name='password' type='password')
+                    fieldset
+                        select#color(name='color')
+                            option(class="black" value="black") Black
+                            option(class="blue" value="blue") Blue
+                            option(class="red" value="red") Red
+                            option(class="pink" value="pink") Pink
+                            option(class="green" value="green") Green
+                    fieldset
+                        input(value='Sign in' type='submit')
         footer
             p Running on node with Express and Jade

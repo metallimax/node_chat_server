@@ -5,7 +5,7 @@ html(lang="en")
         link(rel='stylesheet', href='/css/index.css')
         script(src='//code.jquery.com/jquery-1.11.2.min.js')
         script(src='https://cdn.socket.io/socket.io-1.2.0.js')
-        script(src='/js/index.js')
+        script(src='/js/chat.js')
     
     body
         header
@@ -15,12 +15,12 @@ html(lang="en")
                 h2 Connected users
                 ul#users
                     each user in users
-                        li.user= user
+                        li.user(id='user_'+user)= user
             .main-content
                 ul#messages
                     each entry in history
                         li.message(class=entry.color)
-                            span.who= entry.who
+                            span.who= entry.who+'&gt;&nbp;'
                             span.message= entry.message
                 form#message_form(action='javascript:void(0)' onsubmit='messageSubmit(this)')
                     input#message.message(name='message' placeholder='Type your message here')

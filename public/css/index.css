@@ -6,10 +6,26 @@ body {
     font: 13px Helvetica, Arial;
 }
 
+.error {
+    border-radius: 2px;
+    border: 2px solid #8A0808;
+    background-color: #F78181;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 16px;
+}
+
 
 
 .main-content {
     width: 80%;
+}
+
+.main-content-full {
+    width: 100%;
 }
 
 .sidebar {
@@ -68,6 +84,7 @@ form#message_form input[type="submit"] {
     padding: 0;
     border: 3px solid black;
     height: 600px;
+    overflow-y: auto;
 }
 
 #messages li {
@@ -76,4 +93,62 @@ form#message_form input[type="submit"] {
 
 #messages li:nth-child(odd) {
     background: #eee;
+}
+
+.black {
+    color: black;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.pink {
+    color: pink;
+}
+
+#messages li span.who {
+    font-weight: bold;
+}
+
+#messages li span.message {
+}
+
+form#login_form {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+}
+
+form#login_form fieldset {
+    border: none;
+    padding: 4px;
+}
+
+form#login_form input, form#login_form select {
+    /* border: none; */
+    padding: 8px;
+    border-radius: 4px;
+    border:  1px solid #BDBDBD;
+    width: 100%;
+}
+
+form#login_form input[type="submit"] {
+    padding: 8px 16px 8px 16px;
+    border: none;
+    background-color: #BDBDBD;
+    width: auto;
+}
+
+.main-content-full h1, .main-content-full h2  {
+    text-align: center;
 }
